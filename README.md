@@ -20,3 +20,7 @@ most important part. Add your answer to this markdown file.
 
 Implement a function to convert an adjacency list to an adjacency matrix and
 analyze it as above.
+
+## My Analysis
+
+My implimentation of `convertToAdjList()` is an element of $\Theta(v^2)$, because there are two nested loops which iterate over the number of rows and the number of columns in the adjacency matrix, respectively. The number of rows and the number of columns are both equal to the number of vertices in the graph, so our time complexity is $\Theta(v^2)$.
