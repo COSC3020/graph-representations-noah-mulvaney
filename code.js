@@ -11,6 +11,7 @@ function convertToAdjList(adj_matrix) {
         for (let j = 0; j < adj_matrix[i].length; j++)
             if (adj_matrix[i][j] != 0) row_list.push(j + 1);
         
+        row_list = [...new Set(row_list)];
         adj_list.push(row_list);
     }
     
