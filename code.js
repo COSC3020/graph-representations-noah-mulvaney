@@ -1,6 +1,6 @@
 // COSC3020 Graph Representations Exercise
 // Noah Mulvaney, nmulvane@uwyo.edu
-// 28 Feb 2024
+// 1 Mar 2024
 
 // matrix to list
 function convertToAdjList(adj_matrix) {
@@ -17,24 +17,6 @@ function convertToAdjList(adj_matrix) {
     
     return adj_list;
 }
-
-// test matrix to list
-function test_to_list(am) {
-    console.log("Matrix");
-    for (let i = 0; i < am.length; i++) {
-        console.log(am[i]);
-    }
-    
-    al = convertToAdjList(am);
-    console.log("List:");
-    for (let i = 0; i < al.length; i++) {
-        console.log(al[i]);
-    }
-}
-
-test_to_list([[0, 1], [1, 1]]);
-test_to_list([[0, 1, 0], [0, 0, 0], [1, 1, 0]]);
-test_to_list([[0, 1, 0, 1], [0, 0, 0, 1], [1, 1, 0, 1], [0, 1, 1, 1]]);
 
 // list to matrix
 function convert_to_matrix(adj_list) {
@@ -58,20 +40,4 @@ function convert_to_matrix(adj_list) {
     return matrix;
 }
 
-// test list to matrix
-function test_to_matrix(al) {
-    console.log("List");
-    for (let i = 0; i < al.length; i++) {
-        console.log(al[i]);
-    }
-    
-    am = convert_to_matrix(al);
-    console.log("Matrix:");
-    for (let i = 0; i < al.length; i++) {
-        console.log(am[i]);
-    }
-}
-
-test_to_matrix([[1], [0, 1]]);
-test_to_matrix([[1], [0, 1], [0, 1, 2]]);
-test_to_matrix([[1, 3], [0, 1], [1, 2], []]);
+module.exports = {convertToAdjList, convert_to_matrix};
