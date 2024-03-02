@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/hFs1pb0z)
 # Graph Representations
 
 Implement a function that converts an adjacency matrix to an adjacency list for
@@ -19,3 +20,9 @@ most important part. Add your answer to this markdown file.
 
 Implement a function to convert an adjacency list to an adjacency matrix and
 analyze it as above.
+
+## My Analysis
+
+My implimentation of `convertToAdjList()` is an element of $\Theta(v^2)$, because there are two nested loops which iterate over the number of rows and the number of columns in the adjacency matrix, respectively. The number of rows and the number of columns are both equal to the number of vertices in the graph, so our time complexity is $\Theta(v^2)$.
+
+My implimentation of `convert_to_matrix()` has a complexity of $\Theta(v^2)$, because there are two nested loops which both iterate over the number of vertices to initally create the matrix with zeros, and a second pair of nested loops which iterate over the number of vertices (the number of rows in the adjacency list) and the number of edges adjacent to each vertex. The number of edges adjacent to a given vertex is always less than or equal to the number of edges, so the second pair of loops can be approximated as $v^2$. $v^2 + v^2 \in \Theta(v^2)$ 
